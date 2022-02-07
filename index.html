@@ -5,6 +5,7 @@
    <title>React Meta</title>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/x-icon" href="./img/favicon.png">
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
    <script src="https://kit.fontawesome.com/521d0075db.js" crossorigin="anonymous"></script>
@@ -28,6 +29,8 @@
       .w3-bar .w3-button {
          padding: 16px;
       }
+
+      .w3-row.custom-flex.flex > .w3-col {flex: 1 0 290px;} 
    </style>
 </head>
 
@@ -38,9 +41,9 @@
          <a href="#about" class="w3-bar-item w3-button w3-wide">React Meta</a>
          <!-- Right-sided navbar links -->
          <div class="w3-right w3-hide-small">
-            <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-th"></i>ABOUT</a>
-            <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i>Work</a>
-            <a href="#blog" class="w3-bar-item w3-button"><i class="fa fa-th"></i>Blog</a>
+            <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-home"></i> ABOUT</a>
+            <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th-large"></i> Work</a>
+            <a href="#blog" class="w3-bar-item w3-button"><i class="fa fa-blog"></i> Blog</a>
          </div>
          <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -52,12 +55,11 @@
    </div>
 
    <!-- Sidebar on small screens when clicking the menu icon -->
-   <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
-      style="display:none" id="mySidebar">
-      <a href="javascript:void(0)" onclick="sidebar_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-      <a href="#about" onclick="sidebar_close()" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#work" onclick="sidebar_close()" class="w3-bar-item w3-button">WORK</a>
-      <a href="#blog" onclick="sidebar_close()" class="w3-bar-item w3-button">BLOG</a>
+   <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="rmSidebar">
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#work" class="w3-bar-item w3-button">WORK</a>
+      <a href="#blog" class="w3-bar-item w3-button">BLOG</a>
    </nav>
 
    <!-- About Section -->
@@ -65,7 +67,7 @@
       <div class="w3-display-left w3-text-white" style="padding:48px">
          <span class="w3-jumbo w3-hide-small">React something that Meta</span><br>
          <span class="w3-xxlarge w3-hide-large w3-hide-medium">React something that Meta</span><br>
-         <span class="w3-large">Stop wasting time on daily tasks</span>
+         <span class="w3-large">React to App, Meta to Game.</span>
          <p><a href="#work" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Visit Our Work</a></p>
       </div>
    </header>
@@ -74,9 +76,9 @@
    <div class="w3-container" style="padding:128px 16px" id="work">
       <h3 class="w3-center">Our Work</h3>
       <div class="w3-row-padding" style="margin-top:64px">
-         <div class="w3-col l6 m6 s12 w3-margin-bottom">
+         <div class="w3-col l3 m3 s12 w3-margin-bottom">
             <div class="w3-card w3-padding">
-               <img src="./img/coming_soon.png" alt="John" style="width:100%">
+               <img src="./img/coming_soon.png" alt="coming soon" style="width:100%">
                <div class="w3-container">
                   <h3>Day Day Count</h3>
                   <p class="w3-opacity">Mobile App</p>
@@ -86,9 +88,9 @@
                </div>
             </div>
          </div>
-         <div class="w3-col l6 m6 s12 w3-margin-bottom">
+         <div class="w3-col l3 m3 s12 w3-margin-bottom">
             <div class="w3-card w3-padding">
-               <img src="./img/coming_soon.png" alt="Mike" style="width:100%">
+               <img src="./img/coming_soon.png" alt="coming soon" style="width:100%">
                <div class="w3-container">
                   <h3>Breakout 2022</h3>
                   <p class="w3-opacity">Web Game</p>
@@ -132,16 +134,18 @@
    </footer>
 
    <script>
-      var mySidebar = document.getElementById("mySidebar");
+      var rmSidebar = document.getElementById("rmSidebar");
+      rmSidebar.addEventListener()
       function sidebar_open() {
-         if (mySidebar.style.display === 'block') {
-            mySidebar.style.display = 'none';
+         if (rmSidebar.style.display === 'block') {
+            rmSidebar.style.display = 'none';
          } else {
-            mySidebar.style.display = 'block';
+            rmSidebar.style.display = 'block';
          }
       }
+      
       function sidebar_close() {
-         mySidebar.style.display = "none";
+         rmSidebar.style.display = "none";
       }
    </script>
 
